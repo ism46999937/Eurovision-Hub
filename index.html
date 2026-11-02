@@ -1,61 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080b1a">
-  <meta name="description" content="Noticias verificadas y calendario de preselecciones rumbo a Eurovisión 2027 en Burgas.">
-  <title>Eurovision Hub 2027 — Rumbo a Burgas</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="#fdfbff" name="theme-color">
+<meta content="Noticias verificadas y calendario de preselecciones rumbo a Eurovisión 2027 en Burgas." name="description">
+<title>Eurovision Hub 2027 — Rumbo a Burgas</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="styles.css" rel="stylesheet">
 </head>
 <body>
-  <div class="page-shell">
-    <header class="masthead">
-      <a class="brand" href="#inicio" aria-label="Eurovision Hub, inicio"><span class="brand-mark">E</span><span>EUROVISION<span class="brand-light">HUB</span></span></a>
-      <nav class="main-nav" aria-label="Navegación principal">
-        <a class="nav-link is-active" href="#noticias">Noticias</a>
-        <a class="nav-link" href="#calendario">Calendario</a>
-        <a class="nav-link" href="#finales">Eurovisión 2027</a>
-      </nav>
-      <span class="edition-pill"><i></i> TEMPORADA 2027</span>
-    </header>
-    <main id="inicio">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-line"></span> EL CAMINO A BURGAS</p>
-          <h1 id="hero-title">La cuenta atrás<br>para <span>Eurovisión 2027.</span></h1>
-          <p class="hero-description">Preselecciones, artistas y las noticias que mueven el festival. Todo el viaje hasta el escenario de Burgas, en un mismo lugar.</p>
-          <a class="hero-cta" href="#calendario">Explorar el calendario <span aria-hidden="true">↘</span></a>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-          <div class="hero-star">✦</div><div class="hero-year">27</div>
-          <div class="hero-city"><span>DESTINO</span><strong>BURGAS</strong><small>BULGARIA · MAYO 2027</small></div>
-          <div class="hero-note">UNITED<br>BY MUSIC <span>♪</span></div>
-        </div>
-        <div class="hero-bottom"><span>71.ª EDICIÓN</span><span class="hero-scroll">DESLIZA PARA DESCUBRIR <b>↓</b></span><span>11 — 15 MAYO 2027</span></div>
-      </section>
-      <section class="section news-section" id="noticias">
-        <div class="section-heading"><div><p class="eyebrow">LO QUE ESTÁ PASANDO</p><h2>Últimas noticias<span class="heading-dot">.</span></h2></div><a class="text-link" href="https://www.eurovision.com/stories/" target="_blank" rel="noopener noreferrer">Más noticias oficiales <span>↗</span></a></div>
-        <div class="news-toolbar"><span id="news-count" class="muted-label">Actualidad de Eurovisión</span><label class="search-box"><span aria-hidden="true">⌕</span><input id="news-search" type="search" placeholder="Buscar noticias…" aria-label="Buscar noticias"></label></div>
-        <div id="news-grid" class="news-grid" aria-live="polite"></div>
-        <p id="news-empty" class="empty-state" hidden>No hay noticias que coincidan con tu búsqueda.</p>
-        <p class="data-note">Noticias y resúmenes con enlace a la fuente original. Actualizado el <time datetime="2026-10-28">28 de octubre de 2026</time>.</p>
-      </section>
-      <section class="section calendar-section" id="calendario">
-        <div class="section-heading"><div><p class="eyebrow">LAS CITAS MARCADAS EN ROJO</p><h2>Calendario<span class="heading-dot">.</span></h2></div><p class="section-intro">De las finales nacionales a las tres noches en Burgas.</p></div>
-        <div class="calendar-controls"><label class="search-box calendar-search"><span aria-hidden="true">⌕</span><input id="event-search" type="search" placeholder="Buscar país o evento…" aria-label="Buscar país o evento"></label><div class="filter-group" role="group" aria-label="Filtrar calendario"><button class="filter-button is-selected" data-filter="all">Todos</button><button class="filter-button" data-filter="upcoming">Próximos</button><button class="filter-button" data-filter="eurovision">Eurovisión</button></div></div>
-        <div class="calendar-layout"><div id="calendar-list" class="calendar-list" aria-live="polite"></div><aside class="calendar-aside"><div class="aside-card countdown-card"><p class="eyebrow">PRÓXIMA GRAN CITA</p><strong id="countdown">—</strong><span>días para la gran final</span><div class="countdown-rule"></div><p class="countdown-date">SÁBADO <b>15 MAYO 2027</b></p></div><div class="aside-card venue-card"><span class="venue-icon">✦</span><p class="eyebrow">NOS VEMOS EN</p><h3>Burgas,<br>Bulgaria.</h3><p>Arena Burgas será el escenario de la 71.ª edición del festival.</p><a href="https://www.eurovision.com/newsroom/frequently-asked-questions/faqs-burgas-2027/" target="_blank" rel="noopener noreferrer">Guía oficial de Burgas <span>↗</span></a></div></aside></div>
-        <p id="calendar-empty" class="empty-state" hidden>No hay eventos para mostrar.</p>
-        <p class="data-note">Las fechas sin día confirmado se indican como pendientes y enlazan a la fuente disponible. <a href="https://www.eurovision.com/pages/calendar/" target="_blank" rel="noopener noreferrer">Consultar el calendario oficial ↗</a></p>
-      </section>
-      <section class="finals-section" id="finales"><div class="finals-heading"><p class="eyebrow">TRES NOCHES. UN SOLO GANADOR.</p><h2>El gran escenario<br>nos espera.</h2><p>Eurovisión 2027 llega por primera vez a Bulgaria. Estas son las fechas confirmadas por la UER.</p><a href="https://www.eurovision.com/newsroom/release/36-broadcasters-compete-at-71st-eurovision-burgas/" target="_blank" rel="noopener noreferrer">Toda la información oficial <span>↗</span></a></div><div id="finals-grid" class="finals-grid"></div><div class="finals-watermark" aria-hidden="true">ESC 27</div></section>
-    </main>
-    <footer class="site-footer"><a class="brand footer-brand" href="#inicio"><span class="brand-mark">E</span><span>EUROVISION<span class="brand-light">HUB</span></span></a><span>Hecho por fans, con fuentes oficiales.</span><a href="#inicio">Volver arriba ↑</a></footer>
-  </div>
-  <script src="app.js" defer></script>
+<div class="page-shell">
+<header class="masthead">
+<a aria-label="Eurovision Hub, inicio" class="brand" href="#inicio"><span class="brand-mark">E</span><span>EUROVISION<span class="brand-light">HUB</span></span></a>
+<nav aria-label="Navegación principal" class="main-nav" data-i18n-attr="aria-label:nav.aria">
+<a class="nav-link is-active" data-i18n="nav.news" href="#noticias">Noticias</a>
+<a class="nav-link" data-i18n="nav.calendar" href="#calendario">Calendario</a>
+<a class="nav-link" data-i18n="nav.participants" href="#participantes">Participantes</a>
+<a class="nav-link" data-i18n="nav.odds" href="#apuestas">Apuestas</a>
+<a class="nav-link" data-i18n="nav.finals" href="#finales">Eurovisión 2027</a>
+</nav>
+<div class="masthead-tools"><label class="lang-switch"><span class="visually-hidden" data-i18n="lang.label">Idioma</span><select id="lang-select"><option value="es">Español</option><option value="en">English</option><option value="de">Deutsch</option><option value="it">Italiano</option></select></label><span class="edition-pill" data-i18n="pill"><i></i> TEMPORADA 2027</span></div>
+</header>
+<main id="inicio">
+<section aria-labelledby="hero-title" class="hero">
+<div class="hero-copy">
+<p class="eyebrow" data-i18n="hero.eyebrow"><span class="eyebrow-line"></span> EL CAMINO A BURGAS</p>
+<h1 data-i18n="hero.title" id="hero-title">La cuenta atrás<br>para <span>Eurovisión 2027.</span></h1>
+<p class="hero-description" data-i18n="hero.desc">Preselecciones, artistas y las noticias que mueven el festival. Todo el viaje hasta el escenario de Burgas, en un mismo lugar.</p>
+<a class="hero-cta" data-i18n="hero.cta" href="#calendario">Explorar el calendario <span aria-hidden="true">↘</span></a>
+</div>
+<div aria-hidden="true" class="hero-art">
+<div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+<div class="hero-star">✦</div><div class="hero-year">27</div>
+<div class="hero-city" data-i18n="hero.city"><span>DESTINO</span><strong>BURGAS</strong><small>BULGARIA · MAYO 2027</small></div>
+<div class="hero-note">UNITED<br>BY MUSIC <span>♪</span></div>
+</div>
+<div class="hero-bottom" data-i18n="hero.bottom"><span>71.ª EDICIÓN</span><span class="hero-scroll">DESLIZA PARA DESCUBRIR <b>↓</b></span><span>11 — 15 MAYO 2027</span></div>
+</section>
+<section class="section news-section" id="noticias">
+<div class="section-heading"><div><p class="eyebrow" data-i18n="news.eyebrow">LO QUE ESTÁ PASANDO</p><h2 data-i18n="news.title">Últimas noticias<span class="heading-dot">.</span></h2></div><a class="text-link" data-i18n="news.more" href="https://www.eurovision.com/stories/" rel="noopener noreferrer" target="_blank">Más noticias oficiales <span>↗</span></a></div>
+<div class="news-toolbar"><span class="muted-label" id="news-count">Actualidad de Eurovisión</span><label class="search-box"><span aria-hidden="true">⌕</span><input aria-label="Buscar noticias" data-i18n-attr="placeholder:news.search;aria-label:news.searchAria" id="news-search" placeholder="Buscar noticias…" type="search"></label></div>
+<div aria-live="polite" class="news-grid" id="news-grid"></div>
+<p class="empty-state" data-i18n="news.empty" hidden id="news-empty">No hay noticias que coincidan con tu búsqueda.</p>
+<p class="data-note" data-i18n="news.note">Noticias y resúmenes con enlace a la fuente original. Actualizado el <time datetime="2026-10-28">28 de octubre de 2026</time>.</p>
+</section>
+<section class="section calendar-section" id="calendario">
+<div class="section-heading"><div><p class="eyebrow" data-i18n="cal.eyebrow">LAS CITAS MARCADAS EN ROJO</p><h2 data-i18n="cal.title">Calendario<span class="heading-dot">.</span></h2></div><p class="section-intro" data-i18n="cal.intro">De las finales nacionales a las tres noches en Burgas.</p></div>
+<div class="calendar-controls"><label class="search-box calendar-search"><span aria-hidden="true">⌕</span><input aria-label="Buscar país o evento" data-i18n-attr="placeholder:cal.search;aria-label:cal.searchAria" id="event-search" placeholder="Buscar país o evento…" type="search"></label><div aria-label="Filtrar calendario" class="filter-group" data-i18n-attr="aria-label:cal.filterAria" role="group"><button class="filter-button is-selected" data-filter="all" data-i18n="cal.all">Todos</button><button class="filter-button" data-filter="upcoming" data-i18n="cal.upcoming">Próximos</button><button class="filter-button" data-filter="eurovision" data-i18n="cal.esc">Eurovisión</button></div></div>
+<div class="calendar-layout"><div aria-live="polite" class="calendar-list" id="calendar-list"></div><aside class="calendar-aside"><div class="aside-card countdown-card"><p class="eyebrow" data-i18n="cd.eyebrow">PRÓXIMA GRAN CITA</p><strong id="countdown">—</strong><span data-i18n="cd.days">días para la gran final</span><div class="countdown-rule"></div><p class="countdown-date" data-i18n="cd.date">SÁBADO <b>15 MAYO 2027</b></p></div><div class="aside-card venue-card"><span class="venue-icon">✦</span><p class="eyebrow" data-i18n="venue.eyebrow">NOS VEMOS EN</p><h3 data-i18n="venue.title">Burgas,<br>Bulgaria.</h3><p data-i18n="venue.text">Arena Burgas será el escenario de la 71.ª edición del festival.</p><a data-i18n="venue.link" href="https://www.eurovision.com/newsroom/frequently-asked-questions/faqs-burgas-2027/" rel="noopener noreferrer" target="_blank">Guía oficial de Burgas <span>↗</span></a></div></aside></div>
+<p class="empty-state" data-i18n="cal.empty" hidden id="calendar-empty">No hay eventos para mostrar.</p>
+<p class="data-note" data-i18n="cal.note">Las fechas sin día confirmado se indican como pendientes y enlazan a la fuente disponible. <a href="https://www.eurovision.com/pages/calendar/" rel="noopener noreferrer" target="_blank">Consultar el calendario oficial ↗</a></p>
+</section>
+<section class="section participants-section" id="participantes">
+<div class="section-heading"><div><p class="eyebrow" data-i18n="part.eyebrow">QUIÉN VIAJA A BURGAS</p><h2 data-i18n="part.title">Participantes<span class="heading-dot">.</span></h2></div><p class="section-intro" id="participants-summary"></p></div>
+<div class="news-toolbar"><span class="muted-label" data-i18n="part.toolbar">Países confirmados por la UER · artistas por anunciar</span><label class="search-box"><span aria-hidden="true">⌕</span><input aria-label="Buscar país o emisora" data-i18n-attr="placeholder:part.search;aria-label:part.searchAria" id="participant-search" placeholder="Buscar país o emisora…" type="search"></label></div>
+<div class="table-wrap"><table class="data-table" id="participants-table"><thead><tr><th class="num">#</th><th data-i18n="part.th2">País</th><th data-i18n="part.th3">Emisora</th><th data-i18n="part.th4">Selección</th><th data-i18n="part.th5">Artista · canción</th><th data-i18n="part.th6">Estado</th></tr></thead><tbody id="participants-body"></tbody></table></div>
+<p class="empty-state" data-i18n="part.empty" hidden id="participants-empty">No hay países que coincidan con tu búsqueda.</p>
+<p class="data-note" id="participants-note"></p>
+</section>
+<section class="section odds-section" id="apuestas">
+<div class="section-heading"><div><p class="eyebrow" data-i18n="odds.eyebrow">QUIÉN ES FAVORITO</p><h2 data-i18n="odds.title">Apuestas<span class="heading-dot">.</span></h2></div><p class="section-intro" data-i18n="odds.intro">Cuotas de ganador por casa de apuestas.</p></div>
+<div aria-label="Edición" class="odds-tabs" data-i18n-attr="aria-label:odds.tabAria" role="group"><button class="filter-button odds-tab is-selected" data-edition="2027" data-i18n="odds.tab2027">Burgas 2027</button><button class="filter-button odds-tab" data-edition="2026" data-i18n="odds.tab2026">Final 2026 (referencia)</button></div>
+<p class="muted-label odds-note" id="odds-note"></p>
+<div id="odds-body"></div>
+<p class="data-note" data-i18n="odds.foot">Solo información. Las cuotas cambian y varían según la casa; +18, juega con responsabilidad. Más cuotas en <a href="https://eurovisionworld.com/odds/eurovision" rel="noopener noreferrer" target="_blank">Eurovision World ↗</a>.</p>
+</section>
+<section class="finals-section" id="finales"><div class="finals-heading"><p class="eyebrow" data-i18n="fin.eyebrow">TRES NOCHES. UN SOLO GANADOR.</p><h2 data-i18n="fin.title">El gran escenario<br>nos espera.</h2><p data-i18n="fin.text">Eurovisión 2027 llega por primera vez a Bulgaria. Estas son las fechas confirmadas por la UER.</p><a data-i18n="fin.link" href="https://www.eurovision.com/newsroom/release/36-broadcasters-compete-at-71st-eurovision-burgas/" rel="noopener noreferrer" target="_blank">Toda la información oficial <span>↗</span></a></div><div class="finals-grid" id="finals-grid"></div><div aria-hidden="true" class="finals-watermark">ESC 27</div></section>
+</main>
+<footer class="site-footer"><a class="brand footer-brand" href="#inicio"><span class="brand-mark">E</span><span>EUROVISION<span class="brand-light">HUB</span></span></a><span data-i18n="foot.made">Hecho por fans, con fuentes oficiales.</span><a data-i18n="foot.top" href="#inicio">Volver arriba ↑</a></footer>
+</div>
+<script defer src="i18n.js"></script>
+<script defer src="app.js"></script>
 </body>
 </html>
