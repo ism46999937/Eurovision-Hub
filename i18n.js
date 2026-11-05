@@ -25,6 +25,8 @@ const I18N = {
   "cal.all": "Todos",
   "cal.upcoming": "Próximos",
   "cal.esc": "Eurovisión",
+  "cal.selections": "Preselecciones",
+  
   "cd.eyebrow": "PRÓXIMA GRAN CITA",
   "cd.days": "días para la gran final",
   "cd.date": "SÁBADO <b>15 MAYO 2027</b>",
@@ -82,7 +84,8 @@ const I18N = {
   "org": "UER",
   "and": " y ",
   "odds.note2027": "Las casas de apuestas aún no han abierto el mercado de ganador de 2027: todavía no hay artistas ni canciones confirmados y las grandes preselecciones empiezan en enero. Cuando se abra, esta tabla se rellenará con las cuotas.",
-  "odds.note2026": "Referencia: cuotas previas a la final de 2026, transcritas de una captura de Eurovision World (primeras 19 filas). No son cuotas actuales. Ganó Bulgaria con Dara.",
+  "odds.note2026": "Archivo de cuotas previo a la final de 2026. Eurovisionworld marca este mercado como cerrado y no lo actualizará; consulta la fecha de verificación y la fuente.",
+  "odds.archive": "Mercado cerrado; cuotas archivadas, verificadas el 17 de mayo de 2026. No representan precios actuales.",
   "odds.pendingTitle": "Cuotas de Burgas 2027: todavía no disponibles.",
   "odds.pendingBody": "La tabla tendrá una fila por país con su probabilidad de victoria y la cuota de cada casa.",
   "odds.pendingBtn": "Ver cuotas de la final 2026",
@@ -121,6 +124,8 @@ const I18N = {
   "cal.all": "All",
   "cal.upcoming": "Upcoming",
   "cal.esc": "Eurovision",
+  "cal.selections": "Selections",
+  
   "cd.eyebrow": "NEXT BIG DATE",
   "cd.days": "days until the grand final",
   "cd.date": "SATURDAY <b>15 MAY 2027</b>",
@@ -172,7 +177,8 @@ const I18N = {
   "org": "EBU",
   "and": " and ",
   "odds.note2027": "Bookmakers have not yet opened the 2027 winner market: no artists or songs are confirmed yet and the big national selections start in January. Once it opens, this table will be filled with the odds.",
-  "odds.note2026": "Reference: odds before the 2026 final, transcribed from a Eurovision World screenshot (first 19 rows). These are not current odds. Bulgaria won with Dara.",
+  "odds.note2026": "Archive of odds before the 2026 final. Eurovisionworld marks this market as closed and will not update it; see the verification date and source.",
+  "odds.archive": "Closed market; archived odds, verified on 17 May 2026. These are not current prices.",
   "odds.pendingTitle": "Burgas 2027 odds: not available yet.",
   "odds.pendingBody": "The table will have one row per country with its chance of winning and each bookmaker’s odds.",
   "odds.pendingBtn": "See the 2026 final odds",
@@ -211,6 +217,8 @@ const I18N = {
   "cal.all": "Alle",
   "cal.upcoming": "Kommende",
   "cal.esc": "Eurovision",
+  "cal.selections": "Vorentscheide",
+  
   "cd.eyebrow": "NÄCHSTER GROSSER TERMIN",
   "cd.days": "Tage bis zum Großen Finale",
   "cd.date": "SAMSTAG <b>15. MAI 2027</b>",
@@ -262,7 +270,8 @@ const I18N = {
   "org": "EBU",
   "and": " und ",
   "odds.note2027": "Die Wettanbieter haben den Siegermarkt für 2027 noch nicht eröffnet: Es stehen noch keine Künstler oder Songs fest, und die großen Vorentscheidungen beginnen im Januar. Sobald er öffnet, wird diese Tabelle mit den Quoten gefüllt.",
-  "odds.note2026": "Referenz: Quoten vor dem Finale 2026, übernommen aus einem Eurovision-World-Screenshot (erste 19 Zeilen). Das sind keine aktuellen Quoten. Bulgarien gewann mit Dara.",
+  "odds.note2026": "Archiv der Quoten vor dem Finale 2026. Eurovisionworld kennzeichnet diesen Markt als geschlossen und aktualisiert ihn nicht; Quelle und Prüfdatum siehe Tabelle.",
+  "odds.archive": "Geschlossener Markt; archivierte Quoten, geprüft am 17. Mai 2026. Keine aktuellen Quoten.",
   "odds.pendingTitle": "Quoten für Burgas 2027: noch nicht verfügbar.",
   "odds.pendingBody": "Die Tabelle enthält pro Land eine Zeile mit der Siegchance und den Quoten der einzelnen Anbieter.",
   "odds.pendingBtn": "Quoten zum Finale 2026 ansehen",
@@ -301,6 +310,8 @@ const I18N = {
   "cal.all": "Tutti",
   "cal.upcoming": "Prossimi",
   "cal.esc": "Eurovision",
+  "cal.selections": "Selezioni",
+  
   "cd.eyebrow": "PROSSIMO GRANDE APPUNTAMENTO",
   "cd.days": "giorni alla gran finale",
   "cd.date": "SABATO <b>15 MAGGIO 2027</b>",
@@ -352,7 +363,8 @@ const I18N = {
   "org": "UER",
   "and": " e ",
   "odds.note2027": "I bookmaker non hanno ancora aperto il mercato del vincitore 2027: non ci sono ancora artisti né canzoni confermati e le grandi selezioni nazionali iniziano a gennaio. Quando si aprirà, questa tabella si riempirà con le quote.",
-  "odds.note2026": "Riferimento: quote prima della finale 2026, trascritte da uno screenshot di Eurovision World (prime 19 righe). Non sono quote attuali. Ha vinto la Bulgaria con Dara.",
+  "odds.note2026": "Archivio delle quote prima della finale 2026. Eurovisionworld indica il mercato come chiuso e non lo aggiornerà; consulta la data di verifica e la fonte.",
+  "odds.archive": "Mercato chiuso; quote archiviate, verificate il 17 maggio 2026. Non sono quote attuali.",
   "odds.pendingTitle": "Quote Burgas 2027: non ancora disponibili.",
   "odds.pendingBody": "La tabella avrà una riga per paese con la probabilità di vittoria e le quote di ogni bookmaker.",
   "odds.pendingBtn": "Vedi le quote della finale 2026",
@@ -365,3 +377,7 @@ const I18N = {
 
 // Frases de los datos (calendario, participantes) que se traducen al vuelo.
 const PHRASES = [{"es": "Primera semifinal", "en": "First semi-final", "de": "Erstes Halbfinale", "it": "Prima semifinale"}, {"es": "Segunda semifinal", "en": "Second semi-final", "de": "Zweites Halbfinale", "it": "Seconda semifinale"}, {"es": "Gran final", "en": "Grand final", "de": "Großes Finale", "it": "Gran finale"}, {"es": "Semifinal", "en": "Semi-final", "de": "Halbfinale", "it": "Semifinale"}, {"es": "selección nacional", "en": "national selection", "de": "nationale Vorentscheidung", "it": "selezione nazionale"}, {"es": "Noche de Eurovisión", "en": "Eurovision night", "de": "Eurovision-Abend", "it": "Serata Eurovision"}, {"es": "Final nacional", "en": "National final", "de": "Nationale Finalshow", "it": "Finale nazionale"}, {"es": "Final", "en": "Final", "de": "Finale", "it": "Finale"}, {"es": "Febrero · día por confirmar", "en": "February · day to be confirmed", "de": "Februar · Tag offen", "it": "Febbraio · giorno da confermare"}, {"es": "Fecha por confirmar", "en": "Date to be confirmed", "de": "Termin offen", "it": "Data da confermare"}, {"es": "DÍA POR CONFIRMAR", "en": "DAY TO BE CONFIRMED", "de": "TAG OFFEN", "it": "GIORNO DA CONFERMARE"}, {"es": "Eurovisión 2027", "en": "Eurovision 2027", "de": "Eurovision 2027", "it": "Eurovision 2027"}, {"es": "Selección interna", "en": "Internal selection", "de": "Interne Auswahl", "it": "Selezione interna"}, {"es": "Anfitrión", "en": "Host", "de": "Gastgeber", "it": "Paese ospitante"}, {"es": "Por confirmar", "en": "To be confirmed", "de": "Offen", "it": "Da confermare"}, {"es": "Por anunciar", "en": "To be announced", "de": "Wird bekanntgegeben", "it": "Da annunciare"}, {"es": "HaKokhav HaBa + canción interna", "en": "HaKokhav HaBa + internally chosen song", "de": "HaKokhav HaBa + intern gewählter Song", "it": "HaKokhav HaBa + canzone scelta internamente"}, {"es": "Festival de Sanremo", "en": "Sanremo Festival", "de": "Sanremo-Festival", "it": "Festival di Sanremo"}, {"es": "ene.", "en": "Jan", "de": "Jan.", "it": "gen"}, {"es": "feb.", "en": "Feb", "de": "Feb.", "it": "feb"}, {"es": "mar.", "en": "Mar", "de": "März", "it": "mar"}, {"es": "dic.", "en": "Dec", "de": "Dez.", "it": "dic"}, {"es": "UER", "en": "EBU", "de": "EBU", "it": "UER"}];
+
+
+
+

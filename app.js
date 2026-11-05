@@ -76,7 +76,7 @@ function eventMatches(event) {
   const matchesQuery = `${eventCountry(event)} ${tr(event.name)} ${event.source}`.toLocaleLowerCase(LOCALES[lang]).includes(query);
   const eventDate = dateAtNoon(event.date);
   const isUpcoming = event.tbc || eventDate >= today;
-  const matchesFilter = selectedFilter === "all" || (selectedFilter === "upcoming" && isUpcoming) || (selectedFilter === "eurovision" && event.kind === "eurovision");
+  const matchesFilter = selectedFilter === "all" || (selectedFilter === "upcoming" && isUpcoming) || (selectedFilter === "eurovision" && event.kind === "eurovision") || (selectedFilter === "selections" && event.kind === "selection");
   return matchesQuery && matchesFilter;
 }
 
@@ -137,16 +137,16 @@ function renderOdds() {
   });
   byId("odds-note").textContent = t(`odds.note${oddsEdition}`);
   if (!data.rows.length) {
-    byId("odds-body").innerHTML = `<div class="pending-box"><strong>${escapeHTML(t("odds.pendingTitle"))}</strong><br>${escapeHTML(t("odds.pendingBody"))}<br><button class="filter-button odds-tab" data-edition="2026">${escapeHTML(t("odds.pendingBtn"))}</button></div>`;
+    byId("odds-body").innerHTML = `<div class="pending-box"><strong>${escapeHTML(t("odds.pendingTitle"))}</strong><p>${escapeHTML(t("odds.pendingBody"))}</p><button class="filter-button odds-tab" data-edition="2026">${escapeHTML(t("odds.pendingBtn"))}</button><a class="odds-source-link" href="${escapeHTML(safeURL(data.source))}" target="_blank" rel="noopener noreferrer">Eurovisionworld ↗</a></div>`;
     return;
   }
   const head = data.bookmakers.map((name) => `<th class="num">${escapeHTML(name)}</th>`).join("");
   const body = data.rows.map((row, index) => {
-    const best = Math.max(...row.odds);
+    const best = Math.min(...row.odds);
     const cells = row.odds.map((value) => `<td class="num${value === best ? " best" : ""}">${value}</td>`).join("");
     return `<tr><td class="sticky-col"><span class="cell-country">${flagHTML(row.code)} ${escapeHTML(region(row.code))}</span><span class="cell-sub">${index + 1}. ${escapeHTML(row.artist)} · ${escapeHTML(row.song)}</span></td><td class="num">${row.chance}%</td>${cells}</tr>`;
   }).join("");
-  byId("odds-body").innerHTML = `<div class="table-wrap"><table class="data-table odds-table"><thead><tr><th class="sticky-col">${escapeHTML(t("odds.thCountry"))}</th><th class="num">${escapeHTML(t("odds.thProb"))}</th>${head}</tr></thead><tbody>${body}</tbody></table></div>`;
+  byId("odds-body").innerHTML = `<div class="table-wrap"><table class="data-table odds-table"><thead><tr><th class="sticky-col">${escapeHTML(t("odds.thCountry"))}</th><th class="num">${escapeHTML(t("odds.thProb"))}</th>${head}</tr></thead><tbody>${body}</tbody></table></div>${data.status === "closed" ? `<p class="odds-archive-note">${escapeHTML(t("odds.archive"))} <a href="${escapeHTML(safeURL(data.source))}" target="_blank" rel="noopener noreferrer">Eurovisionworld ↗</a></p>` : ""}`;
 }
 
 function updateCountdown() {
@@ -190,9 +190,9 @@ function setLanguage(next, persist = true) {
 
 async function loadData() {
   try {
-    const [news, calendar, people, oddsData] = await Promise.all([loadJSON("data/news.json"), loadJSON("data/calendar.json"), loadJSON("data/participants.json"), loadJSON("data/odds.json")]);
-    participants = people;
-    odds = oddsData;
+    const [news, calendar] = await Promise.all([loadJSON("data/news.json"), loadJSON("data/calendar.json")]);
+    participants = await loadJSON("data/participants.json").catch(() => ({ countries: [], pending: [], absent: [], source: "" }));
+    odds = await loadJSON("data/odds.json").catch(() => ({}));
     allNews = news.sort((a, b) => b.date.localeCompare(a.date));
     events = calendar.sort((a, b) => a.date.localeCompare(b.date));
     renderAll();
@@ -227,3 +227,6 @@ let savedLang = "es";
 try { savedLang = localStorage.getItem("eurovision-hub-lang") || "es"; } catch { /* sin almacenamiento */ }
 setLanguage(savedLang, false);
 loadData();
+
+
+
